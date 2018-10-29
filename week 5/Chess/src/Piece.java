@@ -38,16 +38,21 @@ class Quin extends Piece{
         }
     }
 }
-/*class At extends Piece{
-    public At(int x1,int x2,int y1,int y2){
+
+class Kon extends Piece{
+    public Kon(int x1,int x2,int y1, int y2){
         super(x1,x2,y1,y2);
     }
 
     @Override
     public String isLegalMove() {
-        if()
+        if(Math.abs(x2-x1)==2 && Math.abs(y2-y1)==1 || Math.abs(y2-y1)==2 && Math.abs(x1-x2)==1){
+            return "Con can move";
+        }
+        else
+            return "Con can't move";
     }
-}*/
+}
 class Slon extends Piece{
     public Slon(int x1,int x2,int y1, int y2){
         super(x1,x2,y1,y2);
@@ -67,9 +72,11 @@ class Test{
     public static void main(String[] args){
         King k = new King(0, 1,5,3);
         System.out.println(k.isLegalMove());
-        Quin q = new Quin(1,2,2,3);
+        Quin q = new Quin(10000,8,10,11);
         System.out.println(q.isLegalMove());
         Slon s = new Slon(1,1,3,3);
         System.out.println(s.isLegalMove());
+        Kon p = new Kon(3,4,3,1);
+        System.out.println(p.isLegalMove());
     }
 }
