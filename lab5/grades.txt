@@ -1,0 +1,7 @@
+Ivanov Ivan - "A"
+Mukhametkazin Eldar - "A"
+Aliyev Ali - "F"
+Menshikov Sergey - "D"
+Average - 71
+Maximum - 100
+Minimum - 22
