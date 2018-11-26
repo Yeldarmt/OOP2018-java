@@ -44,11 +44,11 @@ public class Driver {
                             }
                             else{
                                 password = scanner.next();
+                                //System.out.println(buf_rd.readLine());
                                 hashcodepas = Objects.hash(password);
                                 line1 = buf_rd.readLine();
                                 line2 = buf_rd.readLine();
                                 hashfilepas = Objects.hash(line2);
-                                System.out.println(line1 + line2);
                                 if(login.equals(line1) && hashcodepas==hashfilepas){
                                     date = new Date();
                                     buf_wr.newLine();
